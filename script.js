@@ -28,13 +28,15 @@ let estiloOriginal = true;
 
 cambiarEstiloBtn.addEventListener('click',()=>{
     if (estiloOriginal){
-        contenedor.textContent = 'Se ha cambiado el estilo';
+        contenedor.textContent = 'Se ha cambiado el estilo.';
+        contenedor.style.fontStyle = 'italic';
         contenedor.id = '';
         contenedor.classList.toggle('estiloNuevo');
         estiloOriginal = false;
     }
     else {
         contenedor.textContent = textoOriginal;
+        contenedor.style.fontStyle = 'normal';
         contenedor.id = idOriginal;
         contenedor.classList.remove('estiloNuevo');
         estiloOriginal = true;
